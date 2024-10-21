@@ -20,8 +20,7 @@ def encode(password):
     return encoded_password
 
 def decode(encoded_password):
-    password = "placeholder"
-    return password
+    return "".join([str((int(d) + 7) % 10) for d in encoded_password])
 
 if __name__ == "__main__":
     running = True
